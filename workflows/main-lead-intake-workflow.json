@@ -12,7 +12,7 @@
         },
         "documentId": {
           "__rl": true,
-          "value": "1f5LCBypYl04K5HMJ2sUiHzX2_x3drLaFU35mz7Qpk78",
+          "value": "REDACTED",
           "mode": "list",
           "cachedResultName": "Contact Information (Responses)",
           "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1f5LCBypYl04K5HMJ2sUiHzX2_x3drLaFU35mz7Qpk78/edit?usp=drivesdk"
@@ -33,11 +33,11 @@
         -304,
         0
       ],
-      "id": "b91156c6-93ad-4829-b538-4f7f5d56895f",
+      "id": "REDACTED",
       "name": "Google Sheets Trigger",
       "credentials": {
         "googleSheetsTriggerOAuth2Api": {
-          "id": "4DWasY7i8xhgTC3T",
+          "id": "REDACTED",
           "name": "Google Sheets Trigger account"
         }
       }
@@ -47,19 +47,19 @@
         "assignments": {
           "assignments": [
             {
-              "id": "1a32bef5-9890-4b03-bf37-c715dafee5a1",
+              "id": "REDACTED",
               "name": "FirstName",
               "value": "={{ $json.Name }}",
               "type": "string"
             },
             {
-              "id": "10f78e73-8b74-498c-8c2b-741dbb7dd70c",
+              "id": "REDACTED",
               "name": "LastName",
               "value": "Form Submission",
               "type": "string"
             },
             {
-              "id": "13cba220-dc4a-469d-bc64-8a1870e5bbad",
+              "id": "REDACTED",
               "name": "Email",
               "value": "={{ $json.Email }}",
               "type": "string"
@@ -75,7 +75,7 @@
         -96,
         0
       ],
-      "id": "b38bc578-9b88-4eec-ae1c-236bc3580238",
+      "id": "REDACTED",
       "name": "Edit Fields"
     },
     {
@@ -95,7 +95,7 @@
         336,
         -16
       ],
-      "id": "42b798c4-b58e-47e4-8422-2f728a041113",
+      "id": "REDACTED",
       "name": "Create or update a contact",
       "alwaysOutputData": true,
       "credentials": {
@@ -129,7 +129,7 @@
       "webhookId": "494d6604-762d-46c4-8572-f76511d25c3b",
       "credentials": {
         "slackOAuth2Api": {
-          "id": "40Gidxq1P6pkhzTg",
+          "id": "REDACTED",
           "name": "Slack account"
         }
       }
@@ -145,7 +145,7 @@
           },
           "conditions": [
             {
-              "id": "784cd428-923a-47f6-bd93-86eebe64546e",
+              "id": "REDACTED",
               "leftValue": "={{ $json.Email }}",
               "rightValue": "",
               "operator": {
@@ -155,7 +155,7 @@
               }
             },
             {
-              "id": "6f1dc378-58f9-4827-a98c-a4d6c6b4333d",
+              "id": "REDACTED",
               "leftValue": "={{ $json.FirstName }}",
               "rightValue": "",
               "operator": {
@@ -175,7 +175,7 @@
         96,
         0
       ],
-      "id": "fb78724a-91a3-4970-a5c3-9e04411d9fcc",
+      "id": "REDACTED",
       "name": "If"
     },
     {
@@ -197,12 +197,12 @@
         752,
         -16
       ],
-      "id": "8f08cf2d-1326-4f95-8a91-4a43c196d1bd",
+      "id": "REDACTED",
       "name": "Send a message1",
-      "webhookId": "9708b50e-b344-4a91-b97b-5bb67b732cd5",
+      "webhookId": "REDACTED",
       "credentials": {
         "slackOAuth2Api": {
-          "id": "40Gidxq1P6pkhzTg",
+          "id": "REDACTED",
           "name": "Slack account"
         }
       }
@@ -220,12 +220,12 @@
         960,
         -16
       ],
-      "id": "131ae4fe-d49c-4932-915c-01a073bb7cac",
+      "id": "REDACTED",
       "name": "Send a message2",
-      "webhookId": "0e9f91fd-8c9f-4dab-92ea-e8e0c6562eb7",
+      "webhookId": "REDACTED",
       "credentials": {
         "gmailOAuth2": {
-          "id": "RCSgRDZSIEc4CVrT",
+          "id": "REDACTED",
           "name": "Gmail account"
         }
       }
@@ -335,11 +335,11 @@
         1168,
         -16
       ],
-      "id": "8f96c586-bb61-4f85-a439-eade7c141ec7",
+      "id": "REDACTED",
       "name": "Append row in sheet",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "JBuUj4BacDhqr9tx",
+          "id": "REDACTED",
           "name": "Google Sheets account"
         }
       }
@@ -349,7 +349,7 @@
         "operation": "append",
         "documentId": {
           "__rl": true,
-          "value": "1MvK6M0wf74XYSejmltxS9VZXDyJT96LFsEaK2C0SrwA",
+          "value": "REDACTED",
           "mode": "list",
           "cachedResultName": "Automation logs",
           "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MvK6M0wf74XYSejmltxS9VZXDyJT96LFsEaK2C0SrwA/edit?usp=drivesdk"
@@ -444,11 +444,11 @@
         544,
         208
       ],
-      "id": "945ab335-26ac-4211-b5d8-4a22aa3c4490",
+      "id": "REDACTED",
       "name": "Append row in sheet1",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "JBuUj4BacDhqr9tx",
+          "id": "REDACTED",
           "name": "Google Sheets account"
         }
       }
@@ -550,18 +550,18 @@
     "errorWorkflow": "RlqQXoAmpNdmbwuV",
     "callerPolicy": "workflowsFromSameOwner"
   },
-  "versionId": "824a70d3-207a-40cb-981e-46c8a9f3e5fe",
+  "versionId": "REDACTED",
   "meta": {
     "templateCredsSetupCompleted": true,
-    "instanceId": "d00bc18af90778cc2adb596286ad4dc1994938e1ac57b5821c9bdccb531958be"
+    "instanceId": "REDACTED"
   },
   "nodeGroups": [],
-  "id": "usilcJ2fQ6Ox7VPG",
+  "id": "REDACTED",
   "tags": [
     {
       "updatedAt": "2026-08-03T19:29:47.232Z",
       "createdAt": "2026-08-03T19:29:47.232Z",
-      "id": "AGgESJ2FxNwzq1ki",
+      "id": "REDACTED",
       "name": "a"
     }
   ]
