@@ -100,7 +100,7 @@
       "alwaysOutputData": true,
       "credentials": {
         "salesforceOAuth2Api": {
-          "id": "eHWuLoEMJCZMeXl9",
+          "id": "Redacted",
           "name": "Salesforce account"
         }
       }
@@ -126,7 +126,7 @@
       ],
       "id": "24671b3e-14b2-4dd5-a687-ccdd73d943d5",
       "name": "Send a message",
-      "webhookId": "494d6604-762d-46c4-8572-f76511d25c3b",
+      "webhookId": "Redacted",
       "credentials": {
         "slackOAuth2Api": {
           "id": "REDACTED",
