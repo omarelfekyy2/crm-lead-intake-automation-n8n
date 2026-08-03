@@ -1,0 +1,222 @@
+{
+  "name": "Global Error Handling",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "f86cf3f3-2949-454f-b1eb-43f99da8034d",
+      "name": "Error Trigger"
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "C0BM69XR9SP",
+          "mode": "list",
+          "cachedResultName": "api-testing"
+        },
+        "text": "=🚨 Workflow Failed\n\nWorkflow:\n{{$json.workflow.name}}\n\nFailed Node:\n{{$json.execution.lastNodeExecuted}}\n\nError:\n{{$json.execution.error.message}}\n\nTime:\n{{$now}}",
+        "otherOptions": {}
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.5,
+      "position": [
+        208,
+        0
+      ],
+      "id": "071dd6ea-2e2c-42ed-bb90-94c0931855a4",
+      "name": "Send a message",
+      "webhookId": "e84f8e0b-8799-4e78-b762-6db5bb31f35f",
+      "credentials": {
+        "slackOAuth2Api": {
+          "id": "40Gidxq1P6pkhzTg",
+          "name": "Slack account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1MvK6M0wf74XYSejmltxS9VZXDyJT96LFsEaK2C0SrwA",
+          "mode": "list",
+          "cachedResultName": "Automation logs",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MvK6M0wf74XYSejmltxS9VZXDyJT96LFsEaK2C0SrwA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Automation logs",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MvK6M0wf74XYSejmltxS9VZXDyJT96LFsEaK2C0SrwA/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Timestamp": "={{$now}}",
+            "Workflow": "={{ $('Error Trigger').item.json.workflow }}",
+            "Failed Node": "={{ $('Error Trigger').item.json.execution.lastNodeExecuted }}",
+            "Error": "={{ $('Error Trigger').item.json.execution.error }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Timestamp",
+              "displayName": "Timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "First Name",
+              "displayName": "First Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Last Name",
+              "displayName": "Last Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Salesforce ID",
+              "displayName": "Salesforce ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Workflow",
+              "displayName": "Workflow",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Failed Node",
+              "displayName": "Failed Node",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Error",
+              "displayName": "Error",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        416,
+        0
+      ],
+      "id": "c9ae15e5-ae4b-4639-85c0-f1537e2ad8a4",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "JBuUj4BacDhqr9tx",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Error Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false,
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "versionId": "03543a00-0424-400a-8a70-10e55d5de969",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "d00bc18af90778cc2adb596286ad4dc1994938e1ac57b5821c9bdccb531958be"
+  },
+  "nodeGroups": [],
+  "id": "RlqQXoAmpNdmbwuV",
+  "tags": [
+    {
+      "updatedAt": "2026-08-03T19:29:47.232Z",
+      "createdAt": "2026-08-03T19:29:47.232Z",
+      "id": "AGgESJ2FxNwzq1ki",
+      "name": "a"
+    }
+  ]
+}
