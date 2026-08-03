@@ -31,12 +31,12 @@
         208,
         0
       ],
-      "id": "071dd6ea-2e2c-42ed-bb90-94c0931855a4",
+      "id": "REDACTED",
       "name": "Send a message",
-      "webhookId": "e84f8e0b-8799-4e78-b762-6db5bb31f35f",
+      "webhookId": "Redacted",
       "credentials": {
         "slackOAuth2Api": {
-          "id": "40Gidxq1P6pkhzTg",
+          "id": "REDACTED",
           "name": "Slack account"
         }
       }
@@ -161,11 +161,11 @@
         416,
         0
       ],
-      "id": "c9ae15e5-ae4b-4639-85c0-f1537e2ad8a4",
+      "id": "REDACTED",
       "name": "Append row in sheet",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "JBuUj4BacDhqr9tx",
+          "id": "REDACTED",
           "name": "Google Sheets account"
         }
       }
@@ -207,15 +207,15 @@
   "versionId": "03543a00-0424-400a-8a70-10e55d5de969",
   "meta": {
     "templateCredsSetupCompleted": true,
-    "instanceId": "d00bc18af90778cc2adb596286ad4dc1994938e1ac57b5821c9bdccb531958be"
+    "instanceId": "REDACTED"
   },
   "nodeGroups": [],
-  "id": "RlqQXoAmpNdmbwuV",
+  "id": "REDACTED",
   "tags": [
     {
       "updatedAt": "2026-08-03T19:29:47.232Z",
       "createdAt": "2026-08-03T19:29:47.232Z",
-      "id": "AGgESJ2FxNwzq1ki",
+      "id": "REDACTED",
       "name": "a"
     }
   ]
